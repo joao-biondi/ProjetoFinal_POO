@@ -1,175 +1,118 @@
-BIONTECH - Sistema de Gestão Comercial e Estoque
+🧬 BIONTECH - Sistema de Gestão Comercial e Estoque
+Projeto Final - Programação Orientada a Objetos (POO) > Instituição: UTFPR - Campus Santa Helena
 
-Projeto Final - Programação Orientada a Objetos (POO)
-UTFPR - Campus Santa Helena
 Ano: 2025
-Desenvolvedor: João Vitor Antunes dos Santos
-Orientador: Prof. Giuvane Conti
 
-Descrição do Projeto
+📋 Descrição do Projeto
+Sistema completo de gerenciamento para varejo de pequeno e médio porte desenvolvido em linguagem Java. O sistema contempla todas as operações necessárias para a administração do negócio, focando na resolução do problema de descontrole de estoque e na agilidade do processo de vendas (PDV).
 
-Sistema completo de gerenciamento para varejo de pequeno e médio porte desenvolvido em linguagem Java. O sistema contempla todas as operações necessárias para a administração do negócio, focando na resolução do problema de descontrole de estoque e na agilidade do processo de vendas (PDV). A solução garante a integridade dos dados através de um banco de dados relacional (MySQL) e uma interface gráfica robusta construída com Swing.
+A solução garante a integridade dos dados através de um banco de dados relacional (MySQL) e uma interface gráfica robusta construída com Swing.
 
-Funcionalidades Principais
+🚀 Funcionalidades Principais
+📦 1. Gestão de Produtos
+Cadastro completo (descrição, preço, estoque).
 
-1. Gestão de Produtos
+Vínculo automático com Fornecedores (Chave Estrangeira).
 
-Cadastrar produtos (descrição, preço, estoque)
+Listagem de inventário.
 
-Vínculo automático com Fornecedores (Chave Estrangeira)
+Edição de preços e visualização de códigos para venda rápida.
 
-Listar inventário completo
+👥 2. Gestão de Clientes
+Cadastro com dados completos (CPF, Telefone, Endereço).
 
-Editar preços e quantidades
+Busca Inteligente: Localização automática por CPF na tela de vendas.
 
-Visualizar códigos para venda rápida
+Operações de Edição e Remoção.
 
-2. Gestão de Clientes
+🚛 3. Gestão de Fornecedores
+Cadastro de parceiros comerciais (Razão Social, CNPJ).
 
-Cadastrar clientes com dados completos (CPF, Telefone, Endereço)
+Vínculo direto com o cadastro de produtos.
 
-Listar todos os clientes
+🔐 4. Gestão de Acesso (Login)
+Autenticação via banco de dados.
 
-Busca Inteligente: Localização automática por CPF na tela de vendas
+Máscara visual de senha (*****).
 
-Editar dados cadastrais
+Controle de acesso restrito ao menu principal.
 
-Remover clientes da base de dados
+🛒 5. Gestão de Vendas (PDV)
+Carrinho de compras com múltiplos itens.
 
-3. Gestão de Fornecedores
+Busca rápida de produtos por código (Tecla ENTER).
 
-Cadastrar fornecedores (Razão Social, CNPJ, Contato)
+Busca de clientes por CPF com feedback visual.
 
-Listar parceiros comerciais
+Cálculo automático de subtotais e total geral.
 
-Vínculo com o cadastro de produtos
+Baixa Automática de Estoque: O sistema debita a quantidade vendida instantaneamente (Requisito RF007).
 
-Editar e remover fornecedores
+📄 6. Relatórios
+Exportação PDF: Relatório de inventário utilizando biblioteca iText.
 
-4. Gestão de Acesso (Login)
+Formatação de data/hora no padrão brasileiro.
 
-Autenticação de funcionários via banco de dados
+Layout tabular profissional.
 
-Proteção de senhas com máscara visual (*****)
-
-Controle de acesso ao menu principal
-
-5. Gestão de Vendas (PDV)
-
-Realizar vendas com múltiplos itens (Carrinho de Compras)
-
-Busca rápida de produtos por código (Tecla ENTER)
-
-Busca de clientes por CPF com feedback visual imediato
-
-Cálculo automático de subtotais e total geral
-
-Baixa Automática de Estoque: O sistema debita a quantidade vendida instantaneamente (Requisito RF007)
-
-Geração de número único de venda (ID)
-
-6. Relatórios Gerenciais
-
-Exportação PDF: Geração de relatório de inventário de produtos
-
-Formatação de data e hora local (Padrão Brasileiro)
-
-Layout tabular profissional utilizando biblioteca externa (iText)
-
-Conceitos Técnicos Implementados
-
-✅ Programação Orientada a Objetos (POO)
-
-Abstração de entidades do mundo real em Classes (Cliente, Produto, Venda)
-
-Encapsulamento (Atributos private e métodos Getters/Setters)
-
-Instanciação de objetos e manipulação de estado
+🛠️ Conceitos Técnicos e Arquitetura
+O projeto foi desenvolvido seguindo rigorosamente os pilares da Programação Orientada a Objetos e boas práticas de engenharia de software.
 
 ✅ Arquitetura MVC (Model-View-Controller)
+Separação clara de responsabilidades:
 
-Separação de responsabilidades em pacotes distintos:
+Model: Regras de Negócio e Entidades (br.com.biontech.model).
 
-Model: Representação dos dados (Regras de Negócio)
+View: Interface Gráfica Swing (br.com.biontech.view).
 
-View: Interface Gráfica (Telas Swing)
-
-DAO: Acesso a Dados (SQL e Persistência)
-
-JDBC: Conexão com Banco
+DAO: Camada de Persistência e SQL (br.com.biontech.dao).
 
 ✅ Persistência de Dados (JDBC)
+Conexão robusta com MySQL 8.0.
 
-Conexão robusta com banco de dados MySQL 8.0
+Uso de PreparedStatement para prevenção contra SQL Injection.
 
-Uso de PreparedStatement para segurança contra SQL Injection
+CRUD completo (Create, Read, Update, Delete).
 
-Operações CRUD completas (Create, Read, Update, Delete)
+✅ Interface Gráfica (Swing)
+Telas responsivas com JFrame e JPanel.
 
-✅ Interface Gráfica (Java Swing)
+Tabelas dinâmicas (JTable) preenchidas via ArrayList.
 
-Criação de telas responsivas (JFrame)
+Eventos de teclado (KeyListeners) para atalhos de PDV.
 
-Uso de Painéis (JPanel) e Bordas (TitledBorder) para organização visual
-
-Tabelas dinâmicas (JTable) e Menus (JMenuBar)
-
-Eventos de teclado (KeyListeners) para atalhos e buscas rápidas
-
-✅ Manipulação de Coleções
-
-Uso de ArrayList e List para transporte de dados entre o Banco e a Tela
-
-Iteração (for-each) sobre listas para preenchimento de tabelas e menus suspensos (ComboBox)
-
-Estrutura do Projeto
+📂 Estrutura do Projeto
+Plaintext
 
 Biontech/
 ├── src/
 │   └── br/com/biontech/
-│       ├── dao/                # Camada de Persistência (SQL)
+│       ├── dao/                # Data Access Objects (SQL)
 │       │   ├── ClienteDAO.java
 │       │   ├── ProdutoDAO.java
 │       │   ├── VendaDAO.java
-│       │   ├── ItemVendaDAO.java
-│       │   └── FuncionarioDAO.java
-│       ├── jdbc/               # Conexão
+│       │   └── ...
+│       ├── jdbc/               # Conexão com Banco
 │       │   └── ConnectionFactory.java
-│       ├── model/              # Classes (JavaBeans)
+│       ├── model/              # JavaBeans (Entidades)
 │       │   ├── Cliente.java
 │       │   ├── Produto.java
 │       │   ├── Venda.java
-│       │   ├── ItemVenda.java
-│       │   └── Fornecedor.java
+│       │   └── ...
 │       └── view/               # Telas (GUI)
 │           ├── FrmLogin.java
 │           ├── FrmMenu.java
 │           ├── FrmVendas.java
-│           ├── FrmCliente.java
-│           ├── FrmFornecedor.java
-│           └── FrmProduto.java
-├── lib/                        # Bibliotecas Externas
+│           └── ...
+├── lib/                        # Dependências
 │   ├── mysql-connector-j-8.3.0.jar
 │   └── itextpdf-5.5.13.2.jar
 └── README.md
-
-
-Estruturas de Dados Principais
-
-Cliente (Classe Java)
-
-public class Cliente {
-    private int id;
-    private String nome;
-    private String cpf;
-    private String telefone;
-    private String endereco;
-    
-    // Construtores, Getters e Setters...
-}
-
+💻 Exemplo de Modelagem de Dados
+O sistema utiliza encapsulamento e composição de objetos.
 
 Produto (Com Associação)
+Java
 
 public class Produto {
     private int id;
@@ -179,33 +122,59 @@ public class Produto {
     
     // Associação: Produto "tem um" Fornecedor (Composição)
     private Fornecedor fornecedor;
+
+    // Getters e Setters...
 }
-
-
 Venda (Relacionamento Complexo)
+Java
 
 public class Venda {
     private int id;
-    private Cliente cliente; // Relacionamento com Cliente
+    private Cliente cliente; // Objeto Cliente associado
     private String data_venda;
     private double total_venda;
+    
+    // Métodos...
 }
+⚙️ Instalação e Execução
+Pré-requisitos
+Java JDK 8 ou superior.
 
+NetBeans IDE (Recomendado) ou Eclipse/IntelliJ.
 
-Compilação e Execução
-
-Requisitos do Sistema
-
-Java JDK 8 ou superior
-
-NetBeans IDE (Recomendado) ou qualquer IDE Java
-
-MySQL Server (XAMPP, WAMP ou Workbench)
+MySQL Server (via XAMPP, WAMP ou Workbench).
 
 Passo a Passo
+Configurar Banco de Dados: Execute o script SQL no seu gerenciador MySQL:
 
-1. Configurar Banco de Dados:
-Execute o script SQL no seu gerenciador MySQL para criar o banco e tabelas:
+SQL
 
 CREATE DATABASE biontech_db;
--- (Importar o restante do script SQL fornecido no projeto)
+USE biontech_db;
+-- (Importar o restante das tabelas do arquivo script.sql fornecido)
+Importar o Projeto:
+
+Faça o clone do repositório ou baixe o ZIP.
+
+Abra no NetBeans: File > Open Project.
+
+Configurar Bibliotecas:
+
+Verifique se a pasta lib/ contém mysql-connector e itextpdf.
+
+Adicione-os ao Classpath / Libraries do projeto na IDE.
+
+Executar:
+
+Rode o arquivo FrmLogin.java.
+
+Login Padrão: admin
+
+Senha Padrão: 123
+
+👨‍💻 Autores
+Desenvolvedor: João Vitor Antunes dos Santos
+
+Orientador: Prof. Giuvane Conti
+
+Projeto desenvolvido para fins acadêmicos - UTFPR 2025.
