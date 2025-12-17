@@ -171,7 +171,7 @@ Abra o projeto no NetBeans (File > Open Project).
 
 Configurar Bibliotecas:
 
-Certifique-se de que os arquivos .jar na pasta lib (MySQL Connector e iText) estão adicionados corretamente nas "Libraries" do projeto no NetBeans.
+Certificar que os arquivos .jar na pasta lib (MySQL Connector e iText) estão adicionados corretamente nas "Libraries" do projeto no NetBeans.
 
 Executar:
 
